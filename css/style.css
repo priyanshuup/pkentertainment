@@ -365,7 +365,7 @@ figure img {
     display: none;
   }
 }
-@media only screen and (min-width: 993) and (max-width: 1200px) {
+@media only screen and (min-width: 993) and (max-width: 1199px) {
     .nav-list {
         flex-direction: column;
         position: absolute;
@@ -480,7 +480,7 @@ figure img {
       font-size:2.5rem;
     }
 }
-@media only screen and (min-width: 993px) and (max-width: 1700px) {
+@media only screen and (min-width: 1200px) and (max-width: 1700px) {
     .nav-list {
         flex-direction: column;
         position: absolute;
