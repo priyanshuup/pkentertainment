@@ -1,0 +1,917 @@
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: rgb(213, 53, 53);
+}
+
+@font-face {
+  font-family: "FSP DEMO - Dashiell Fine";
+  src: url("../fonts/Fontspring-DEMO-dashiellfine-regular-2.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "MenoBanner";
+  src: url("../fonts/MenoBanner-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.navbar {
+  height: 8vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  z-index: 9999;
+  background-color: rgb(0, 0, 0);
+}
+
+.navbar li a:hover {
+  color: #ceaf56;
+}
+
+.nav-list {
+  width: 80%;
+  display: flex;
+  list-style: none;
+  gap: 80px;
+  transition: 0.5s ease-in-out;
+}
+
+figure {
+  height: 50px;
+  margin-left: 55px;
+  width: 50px;
+  color: white;
+  font-size: 1.5em;
+  z-index: 9999;
+}
+
+figure img {
+  height: 100%;
+  width: 100%;
+}
+
+.nav-list a {
+  position: relative;
+  text-decoration: none;
+  color: white;
+  font-family: "FSP DEMO - Dashiell Fine";
+  font-size: 1.8rem;
+  transition: 0.5s ease-in-out;
+}
+
+.has-services {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  flex-wrap: wrap;
+  transition: 1s ease-in-out;
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  top: 65%;
+  text-align: start;
+  padding: 5px 0;
+  color: #fff;
+  background-color: #000000;
+  transition: 2s ease-in-out;
+  margin: 8px 0;
+}
+
+.submenu li {
+  margin: 10px 0;
+  padding: 0 20px;
+}
+
+.submenu li a {
+  font-size: 1.4rem;
+  transition: 2s ease;
+}
+
+.submenu li a:hover {
+  font-size: 1.5rem;
+  text-decoration: line-through;
+}
+
+.has-services:hover .submenu {
+  display: block;
+}
+
+.hamburger {
+  display: none;
+  font-size: 1.5em;
+  color: white;
+  cursor: pointer;
+  margin-right: 25px;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  transition: all 0.3s ease-in-out;
+  background-color: #fff;
+}
+
+@media only screen and (max-width: 768px) {
+  .nav-list {
+      flex-direction: column;
+      position: absolute;
+      top: 45vh;
+      transform: translate(-50%, -50%);
+      left: -100%;
+      background-color: #000000;
+      width: 60%;
+      text-align: center;
+      gap: 25px;
+      padding: 50px;
+  }
+
+  .nav-list.show {
+      display: flex;
+      left: 50%;
+      top: 10;
+  }
+
+  .nav-list li {
+      margin: 0;
+      margin-bottom: 8px;
+  }
+
+  .nav-list a {
+      font-size: 1.2rem;
+  }
+
+  .has-services .submenu {
+      left: 25px;
+      text-align: justify;
+  }
+
+  .has-services .submenu {
+      display: none;
+      position: relative;
+  }
+
+  .submenu li a {
+      font-size: 1rem;
+      margin: 0;
+      padding: 0;
+  }
+
+  .navbar li a:hover {
+      color: #ceaf56;
+      font-size: 1.1rem;
+      border-bottom: 2px solid #ffffff;
+  }
+
+  .hamburger {
+      display: block;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+      opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+  }
+  .PK-Homepage{
+    height: 80vh;
+  }
+  .PK-Homepage h1{
+    font-size: 2.5rem;
+  }
+  .PK-Homepage .content h2 {
+    font-family: "FSP DEMO - Dashiell Fine";
+    color: white;
+    font-size: 1rem;
+    font-weight: 300;
+    margin: 20px 0;
+  }
+  .PK-Homepage .ri-question-answer-fill {
+    position: fixed;
+    left: 50px;
+    bottom: 60px;
+    font-size: 3rem;
+    color: #fff;
+    z-index: 99;
+  }
+  .PK-Homepage .ri-arrow-down-line {
+    bottom: 110px;
+    left: 90%;
+    display: none;
+  }
+  
+  #main #videocontent{
+    height: 50vh;
+  }
+  #videocontent iframe {
+    width: 300%;
+    height: 100%;
+    margin-left: -100%;
+    border: none;
+  }
+  .shortabout .sub-shortaboutdiv{
+    padding: 0 5px;
+  }
+  .shortabout .sub-shortaboutdiv h2{
+    font-size: 1rem;
+  }
+  .shortabout .sub-shortaboutdiv span{
+    font-size: 1.5rem;
+  }
+  .shortabout .sub-shortaboutdiv h3{
+    font-size:2rem;
+  }
+
+  #main #Newsletter .clmn:nth-child(2),
+  #main #Newsletter .clmn:nth-child(3),
+  #main #Newsletter .clmn:nth-child(4),
+  #main #Newsletter .clmn:nth-child(5){
+    display: none;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .nav-list {
+      flex-direction: column;
+      position: absolute;
+      top: 45vh;
+      transform: translate(-50%, -50%);
+      left: -100%;
+      background-color: #000000;
+      width: 60%;
+      text-align: center;
+      gap: 25px;
+      padding: 50px;
+  }
+
+  .nav-list.show {
+      display: flex;
+      left: 50%;
+      top: 10;
+  }
+
+  .nav-list li {
+      margin: 0;
+      margin-bottom: 8px;
+  }
+
+  .nav-list a {
+      font-size: 1.2rem;
+  }
+
+  .has-services .submenu {
+      left: 25px;
+      text-align: justify;
+  }
+
+  .has-services .submenu {
+      display: none;
+      position: relative;
+  }
+
+  .submenu li a {
+      font-size: 1rem;
+      margin: 0;
+      padding: 0;
+  }
+
+  .navbar li a:hover {
+      color: #ceaf56;
+      font-size: 1.1rem;
+      border-bottom: 2px solid #ffffff;
+  }
+
+  .hamburger {
+      display: block;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+      opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+  }
+  .PK-Homepage{
+    height: 80vh;
+  }
+  .PK-Homepage h1{
+    font-size: 3rem;
+  }
+  .PK-Homepage .content h2 {
+    font-family: "FSP DEMO - Dashiell Fine";
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin: 20px 0;
+  }
+  .PK-Homepage .ri-question-answer-fill {
+    position: fixed;
+    left: 50px;
+    bottom: 60px;
+    font-size: 3rem;
+    color: #fff;
+    z-index: 99;
+  }
+  .PK-Homepage .ri-arrow-down-line {
+    bottom: 110px;
+    left: 90%;
+    display: none;
+  }
+  
+  #main #videocontent{
+    height: 100vh;
+  }
+  #videocontent iframe {
+    width: 300%;
+    height: 100%;
+    margin-left: -100%;
+    border: none;
+  }
+  .shortabout .sub-shortaboutdiv{
+    padding: 0 8px;
+  }
+  .shortabout .sub-shortaboutdiv h2{
+    font-size: 1.2rem;
+  }
+  .shortabout .sub-shortaboutdiv span{
+    font-size: 1.8rem;
+  }
+  .shortabout .sub-shortaboutdiv h3{
+    font-size:2.5rem;
+  }
+
+  #main #Newsletter .clmn:nth-child(2),
+  #main #Newsletter .clmn:nth-child(3),
+  #main #Newsletter .clmn:nth-child(4),
+  #main #Newsletter .clmn:nth-child(5){
+    display: none;
+  }
+}
+@media only screen and (max-width: 1200px) {
+    .nav-list {
+        flex-direction: column;
+        position: absolute;
+        top: 45vh;
+        transform: translate(-50%, -50%);
+        left: -100%;
+        background-color: #000000;
+        width: 60%;
+        text-align: center;
+        gap: 25px;
+        padding: 50px;
+    }
+  
+    .nav-list.show {
+        display: flex;
+        left: 50%;
+        top: 10;
+    }
+  
+    .nav-list li {
+        margin: 0;
+        margin-bottom: 8px;
+    }
+  
+    .nav-list a {
+        font-size: 1.2rem;
+    }
+  
+    .has-services .submenu {
+        left: 25px;
+        text-align: justify;
+    }
+  
+    .has-services .submenu {
+        display: none;
+        position: relative;
+    }
+  
+    .submenu li a {
+        font-size: 1rem;
+        margin: 0;
+        padding: 0;
+    }
+  
+    .navbar li a:hover {
+        color: #ceaf56;
+        font-size: 1.1rem;
+        border-bottom: 2px solid #ffffff;
+    }
+  
+    .hamburger {
+        display: block;
+    }
+  
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+  
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+  
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .PK-Homepage{
+      height: 80vh;
+    }
+    .PK-Homepage h1{
+      font-size: 5rem;
+    }
+    .PK-Homepage .content h2 {
+      font-family: "FSP DEMO - Dashiell Fine";
+      color: white;
+      font-size: 1.8rem;
+      font-weight: 300;
+      margin: 20px 0;
+    }
+    .PK-Homepage .ri-question-answer-fill {
+      position: fixed;
+      left: 50px;
+      bottom: 60px;
+      font-size: 3rem;
+      color: #fff;
+      z-index: 99;
+    }
+    .PK-Homepage .ri-arrow-down-line {
+      bottom: 110px;
+      left: 90%;
+      display: none;
+    }
+    
+    #main #videocontent{
+      height: 100vh;
+    }
+    #videocontent iframe {
+      width: 300%;
+      height: 100%;
+      margin-left: -100%;
+      border: none;
+    }
+    .shortabout .sub-shortaboutdiv{
+      padding: 0 8px;
+    }
+    .shortabout .sub-shortaboutdiv h2{
+      font-size: 1.2rem;
+    }
+    .shortabout .sub-shortaboutdiv span{
+      font-size: 1.8rem;
+    }
+    .shortabout .sub-shortaboutdiv h3{
+      font-size:2.5rem;
+    }
+}
+@media only screen and (max-width: 1700px) {
+    .nav-list {
+        flex-direction: column;
+        position: absolute;
+        top: 45vh;
+        transform: translate(-50%, -50%);
+        left: -100%;
+        background-color: #000000;
+        width: 60%;
+        text-align: center;
+        gap: 25px;
+        padding: 50px;
+    }
+  
+    .nav-list.show {
+        display: flex;
+        left: 50%;
+        top: 10;
+    }
+  
+    .nav-list li {
+        margin: 0;
+        margin-bottom: 8px;
+    }
+  
+    .nav-list a {
+        font-size: 1.2rem;
+    }
+  
+    .has-services .submenu {
+        left: 25px;
+        text-align: justify;
+    }
+  
+    .has-services .submenu {
+        display: none;
+        position: relative;
+    }
+  
+    .submenu li a {
+        font-size: 1rem;
+        margin: 0;
+        padding: 0;
+    }
+  
+    .navbar li a:hover {
+        color: #ceaf56;
+        font-size: 1.1rem;
+        border-bottom: 2px solid #ffffff;
+    }
+  
+    .hamburger {
+        display: block;
+    }
+  
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+  
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+  
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .PK-Homepage{
+      height: 80vh;
+    }
+    .PK-Homepage h1{
+      font-size: 6rem;
+    }
+    .PK-Homepage .content h2 {
+      font-family: "FSP DEMO - Dashiell Fine";
+      color: white;
+      font-size: 2rem;
+      font-weight: 300;
+      margin: 20px 0;
+    }
+    .PK-Homepage .ri-question-answer-fill {
+      position: fixed;
+      left: 50px;
+      bottom: 60px;
+      font-size: 3rem;
+      color: #fff;
+      z-index: 99;
+    }
+    .PK-Homepage .ri-arrow-down-line {
+      bottom: 110px;
+      left: 90%;
+      display: none;
+    }
+    
+    #main #videocontent{
+      height: 100vh;
+    }
+    #videocontent iframe {
+      width: 300%;
+      height: 100%;
+      margin-left: -100%;
+      border: none;
+    }
+    .shortabout .sub-shortaboutdiv{
+      padding: 0 8px;
+    }
+    .shortabout .sub-shortaboutdiv h2{
+      font-size: 2rem;
+    }
+    .shortabout .sub-shortaboutdiv span{
+      font-size:2.5rem;
+    }
+    .shortabout .sub-shortaboutdiv h3{
+      font-size:4rem;
+    }
+}
+
+.PK-Homepage {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-image: url("https://images.unsplash.com/photo-1517814761483-6769dab4e9c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80");
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0.8;
+  z-index: 1;
+}
+
+.content {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  z-index: 9;
+}
+
+h1 {
+  font-family: "MenoBanner";
+  display: inline-block;
+  line-height: 0.9em;
+  color: white;
+  font-size: 7rem;
+  font-weight: 200;
+  border-bottom: 2px solid #ceaf56;
+  margin: 0;
+}
+
+.content h2 {
+  font-family: "FSP DEMO - Dashiell Fine";
+  color: white;
+  font-size: 1.6rem;
+  font-weight: 300;
+  margin: 20px 0;
+}
+
+.content button {
+  position: relative;
+  padding: 10px 40px;
+  font-size: 1.2rem;
+  font-family: "FSP DEMO - Dashiell Fine";
+  background-color: #ceaf56;
+  border: none;
+  border-radius: 2px;
+  left: 20px;
+  margin-top: 1rem;
+}
+
+.ri-question-answer-fill {
+  position: fixed;
+  left: 100px;
+  bottom: 60px;
+  font-size: 3rem;
+  color: #fff;
+  z-index: 99;
+}
+
+.ri-arrow-down-line {
+  position: absolute;
+  bottom: 5%;
+  left: 95%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  color: #fff;
+  padding: 5px;
+  border-radius: 50%;
+  color: #000;
+  background-color: #fff;
+  z-index: 99;
+}
+
+#videocontent {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  background-image: url("https://images.unsplash.com/photo-1623099405608-83508f309cc2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80");
+}
+
+iframe {
+  width: 300%;
+  height: 100%;
+  margin-left: -100%;
+  border: none;
+}
+
+.videoevent-div {
+  position: relative;
+  overflow: hidden;
+  height: 110%;
+  width: 100%;
+  background-color: transparent;
+  pointer-events: none;
+  box-shadow: rgba(241, 3, 3, 0.35) 0px 5px 15px;
+}
+
+.shortabout {
+  position: relative;
+  height: 50vh;
+  width: 100%;
+  background-color: #896caa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.sub-shortaboutdiv {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background-color: rgb(0, 0, 0);
+  padding: 100px;
+  text-align: center;
+}
+
+.shortabout h2 {
+  font-family: "FSP DEMO - Dashiell Fine";
+  color: white;
+  font-size: 1.8rem;
+  font-weight: 100;
+  margin: 20px 0;
+  display: inline-block;
+  text-align: center;
+}
+
+.shortabout span {
+  font-size: 2rem;
+  margin: 0 1rem;
+  color: #ceaf56;
+}
+
+.shortabout h3 {
+  font-family: "MenoBanner";
+  color: white;
+  font-size: 4.55rem;
+  font-weight: 100;
+  text-align: center;
+  margin: 0;
+}
+
+#Newsletter {
+  position: relative;
+  /* height: 40vh; */
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  background-color: #1a1717;
+  z-index: 999;
+  overflow: hidden;
+}
+
+#Newsletter h2 {
+  font-family: "MenoBanner";
+  display: inline-block;
+  line-height: 0.9em;
+  color: white;
+  font-size: 2rem;
+  font-weight: 200;
+  border-bottom: 2px solid #ceaf56;
+  margin: 0;
+}
+
+.homeicons {
+  margin: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.homeicons i {
+  font-size: 1.3rem;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  background-color: #fff;
+  border-radius: 50%;
+  color: #000;
+}
+
+.col1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.clmn {
+  color: #fff;
+}
+
+.clmn h3 {
+  font-family: "MenoBanner";
+  font-weight: 500;
+  font-size: 1.8rem;
+  color: #ceaf56;
+}
+
+.clmn h5 {
+  font-family: "FSP DEMO - Dashiell Fine";
+  font-weight: 200;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+#newsletterbtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#newsletterbtn input {
+  background: none;
+  border: none;
+  border-bottom: 1px solid #fff;
+  text-align: center;
+  font-size: 1rem;
+  color: white;
+  font-family: "FSP DEMO - Dashiell Fine";
+  padding: 0.5rem 1rem;
+}
+
+#newsletterbtn button {
+  margin: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-family: "MenoBanner";
+  cursor: pointer;
+}
+
+footer {
+  text-align: center;
+  background-color: black;
+  color: #fff;
+  padding: 0.1rem;
+  font-size: 1.2rem;
+  font-family: "FSP DEMO - Dashiell Fine";
+}
+
+.packagesDetails {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: rgb(255, 255, 255);
+}
+
+.packagesDetails h1 {
+  font-size: 4rem;
+  margin-top: 8rem;
+  color: #000;
+}
+
+.subscriptions {
+  margin: 2rem 0;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.box {
+  height: 50vh;
+  width: 15vw;
+  margin-right: 2rem;
+  text-align: center;
+  padding: 1rem 2rem;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 10px;
+}
+
+.box ul {
+  text-align: center;
+  padding: 0;
+}
+
+.box ul li {
+  text-align: center;
+  text-decoration: none;
+  list-style: none;
+  border-bottom: 1px solid rgb(60, 60, 60, 0.2);
+  font-family: "FSP DEMO - Dashiell Fine";
+}
+
+.box h2 {
+  background-color: #000000;
+  padding: 1rem 2rem;
+  color: #fff;
+  font-family: "FSP DEMO - Dashiell Fine";
+  border-radius: 10px;
+}
+
+.box:nth-child(2) {
+  height: 60vh;
+  background-color: #ceaf56;
+}
+
+.box:nth-child(2) h2 {
+  background-color: rgb(255, 255, 255);
+  color: #000;
+}
